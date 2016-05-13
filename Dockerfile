@@ -31,6 +31,7 @@ RUN \
 	libxml-parser-perl \
         make \
         texinfo \
+	u-boot-tools \
         unzip \
         wget \
         xfonts-utils \
