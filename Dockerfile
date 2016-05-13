@@ -48,7 +48,6 @@ RUN \
 	useradd -u 1000 -U -d /src -s /bin/false libreelec \
 &&	usermod -G users libreelec
 
-WORKDIR ["/src"
 VOLUME ["/output" "/src"]
 
 # make and own our src and output folders
