@@ -61,10 +61,10 @@ RUN \
 RUN \
 	mkdir -p /output /src \
 	&& chown -R libreelec:users /src /output
-USER libreelec
 
 # s6 overlay
 RUN curl -L https://github.com/just-containers/s6-overlay/releases/download/v1.17.2.0/s6-overlay-amd64.tar.gz | tar xvz -C /
 
+USER libreelec
 VOLUME ["/output" "/src"]
 
