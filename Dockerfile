@@ -6,6 +6,11 @@
 FROM ubuntu:16.04
 MAINTAINER docker@libreelec.tv
 ARG DEBIAN_FRONTEND="noninteractive"
+COPY root/ /
+ENV PS1="$(whoami)@$(hostname):$(pwd)$ " \
+HOME="/src" \
+TERM="xterm"
+
 
 # install apt-utils for cleaner package installs
 RUN \
@@ -21,7 +26,8 @@ RUN \
 	bc \
 	bzip2 \
 	ccache \
-	default-jre \
+	curl \
+        default-jre \
 	g++ \
 	gawk \
 	gcc \
@@ -31,7 +37,8 @@ RUN \
 	libxml-parser-perl \
         make \
         texinfo \
-	u-boot-tools \
+	tar \
+        u-boot-tools \
         unzip \
         wget \
         xfonts-utils \
@@ -49,7 +56,6 @@ RUN \
 	useradd -u 1000 -U -d /src -s /bin/false libreelec \
 &&	usermod -G users libreelec
 
-VOLUME ["/output" "/src"]
 
 # make and own our src and output folders
 RUN \
@@ -57,4 +63,8 @@ RUN \
 	&& chown -R libreelec:users /src /output
 USER libreelec
 
+# s6 overlay
+RUN curl -L https://github.com/just-containers/s6-overlay/releases/download/v1.17.2.0/s6-overlay-amd64.tar.gz | tar xvz -C /
+
+VOLUME ["/output" "/src"]
 
