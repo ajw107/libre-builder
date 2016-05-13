@@ -20,6 +20,7 @@ RUN \
 &&	apt-get install -y \
 	bc \
 	bzip2 \
+	ccache \
 	default-jre \
 	g++ \
 	gawk \
