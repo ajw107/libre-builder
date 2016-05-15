@@ -26,7 +26,7 @@ RUN \
 RUN \
 	apt-get update \
 &&	apt-get install -y \
-	bc= \
+	bc \
 	bzip2 \
 	ccache \
 	curl \
