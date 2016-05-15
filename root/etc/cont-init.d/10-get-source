@@ -1,8 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-[[ ! -d /src/LibreELEC.tv/.git ]] && git clone https://github.com/LibreELEC/LibreELEC.tv /src/LibreELEC.tv
-
-cd /src/LibreELEC.tv
-git pull
-
-
