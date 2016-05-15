@@ -26,28 +26,28 @@ RUN \
 RUN \
 	apt-get update \
 &&	apt-get install -y \
-	bc=1.06.95-9build1 \
-	bzip2=1.0.6-8 \
-	ccache=3.2.4-1 \
-	curl=7.47.0-1ubuntu2 \
-        default-jre=2:1.8-56ubuntu2 \
-	g++=4:5.3.1-1ubuntu1 \
-	gawk=1:4.1.3+dfsg-0.1 \
-	gcc=4:5.3.1-1ubuntu1 \
-	git=1:2.7.4-0ubuntu1 \
-	gperf=3.0.4-2 \
-	libncurses5-dev=6.0+20160213-1ubuntu1 \
-	libxml-parser-perl=2.44-1build1 \
-        make=4.1-6 \
-        texinfo=6.1.0.dfsg.1-5 \
-	tar=1.28-2.1 \
-        u-boot-tools=2016.01+dfsg1-2ubuntu1 \
-        unzip=6.0-20ubuntu1 \
-        wget=1.17.1-1ubuntu1 \
-        xfonts-utils=1:7.7+3 \
-	xsltproc=1.1.28-2.1 \
-	xz-utils=5.1.1alpha+20120614-2ubuntu2 \
-        zip=3.0-11 \
+	bc= \
+	bzip2 \
+	ccache \
+	curl \
+        default-jre \
+	g++ \
+	gawk \
+	gcc \
+	git \
+	gperf \
+	libncurses5-dev \
+	libxml-parser-perl \
+        make \
+        texinfo \
+	tar \
+        u-boot-tools \
+        unzip \
+        wget \
+        xfonts-utils \
+	xsltproc \
+	xz-utils \
+        zip \
 
 
 # clean up
@@ -68,4 +68,5 @@ RUN \
 
 USER libreelec
 VOLUME ["/src"]
+
 
