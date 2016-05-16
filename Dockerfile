@@ -3,7 +3,7 @@
 #
 #
 
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 MAINTAINER docker@libreelec.tv
 
 ARG DEBIAN_FRONTEND="noninteractive"
