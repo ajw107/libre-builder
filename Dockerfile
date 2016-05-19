@@ -3,7 +3,7 @@
 #
 #
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER docker@libreelec.tv
 
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -22,7 +22,6 @@ RUN \
 	bzip2 \
 	ccache \
 	curl \
-	default-jre \
 	g++ \
 	gawk \
 	gcc \
@@ -31,6 +30,7 @@ RUN \
 	libncurses5-dev \
 	libxml-parser-perl \
 	make \
+	openjdk-9-jre-headless \
 	texinfo \
 	tar \
 	u-boot-tools \
