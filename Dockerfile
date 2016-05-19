@@ -18,7 +18,7 @@ TERM="xterm"
 RUN \
 	apt-get update && \
 	apt-get install -y && \
-	bc \
+	build-essential \
 	bzip2 \
 	ccache \
 	curl \
